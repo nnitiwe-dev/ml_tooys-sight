@@ -1,1 +1,1 @@
-web: gunicorn tooysCV.wsgi --log-file -
+web: gunicorn tooysCV.wsgi
