@@ -1,5 +1,5 @@
 # The ML Tooys-Sight Project 
-A ML Computer Vision project hosted on Heroku. Showcases different image processing models and Algorithms.
+A Machine Learning Computer Vision project hosted on Heroku. Showcases different image processing models and Algorithms.
 
 ## Folder Structure
 ```bash
