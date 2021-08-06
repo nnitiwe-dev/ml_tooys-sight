@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-hzhz$k2&b-!!a^*9@_*1252vs742cnf37#b_#3(gb(v-rrs!v#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ml-tooys-sight.herokuapp.com','localhost']
+ALLOWED_HOSTS = []
 
 
 # Application definition
