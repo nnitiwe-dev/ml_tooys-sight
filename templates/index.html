@@ -5,27 +5,33 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Flexor Bootstrap Template - Index</title>
+  {% block title %}
+  <title>ML Tooys CV- A computer vision project</title>
+   {% endblock %}
+
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+
+
+  {% load static %}
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Flexor - v2.4.1
@@ -42,8 +48,8 @@
     <div class="container d-flex">
       <div class="contact-info mr-auto">
         <ul>
-          <li><i class="icofont-envelope"></i><a href="mailto:contact@example.com">contact@example.com</a></li>
-          <li><i class="icofont-phone"></i> +1 5589 55488 55</li>
+          <li><i class="icofont-envelope"></i><a href="mailto:nnitiwe@gmail.com">nnitiwe@gmail.com</a></li>
+          <li><i class="icofont-phone"></i> +234 902 048 0798</li>
           <li><i class="icofont-clock-time icofont-flip-horizontal"></i> Mon-Fri 9am - 5pm</li>
         </ul>
 
@@ -59,38 +65,19 @@
     <div class="container d-flex">
 
       <div class="logo mr-auto">
-        <h1 class="text-light"><a href="index.html"><span>Flexor</span></a></h1>
+        <h1 class="text-light"><a href="{% url 'index' %}"><span>ML Tooys CV</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="{% url 'twitter' %}">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="drop-down"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Drop Down 2</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://nnitiwe-dev.github.io">Resume</a></li>
+          <li><a href="#contact">Contact Me</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -101,8 +88,8 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="container" data-aos="fade-in">
-      <h1>Welcome to Flexor</h1>
-      <h2>We are team of talented designers making websites with Bootstrap</h2>
+      <h1>Welcome to ML Tooys CV</h1>
+      <h2>A Computer vision project showcasing different ML Models & CV Techniques</h2>
       <div class="d-flex align-items-center">
         <i class="bx bxs-right-arrow-alt get-started-icon"></i>
         <a href="#about" class="btn-get-started scrollto">Get Started</a>
@@ -111,7 +98,7 @@
   </section><!-- End Hero -->
 
   <main id="main">
-
+    {% block content %}
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
       <div class="container">
@@ -119,10 +106,9 @@
         <div class="row">
           <div class="col-xl-4 col-lg-5" data-aos="fade-up">
             <div class="content">
-              <h3>Why Choose Flexor for your company website?</h3>
+              <h3>Why ML Tooys CV?</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+                Machine Learning/ Data Science is a fast grow field in Computer Science that has gain the attention and curiosity of Tech Enthusiasts in recent years. However, alot of beginners spend a lot of time building models without get to see the beauty of these models in real life applications. This projects tries to overcome that challenge.
               </p>
               <div class="text-center">
                 <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
@@ -808,9 +794,9 @@
 
       </div>
     </section><!-- End Contact Section -->
-
+    {% endblock %}
   </main><!-- End #main -->
-
+  
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
