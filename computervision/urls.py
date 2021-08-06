@@ -1,9 +1,14 @@
-# Use include() to add paths from the catalog application
-from django.urls import include
+from django.urls import path
+from . import views
 
-urlpatterns += [
-    path('cv/', include('computervision.urls')),
+urlpatterns = [
+    path('', views.index_page, name = 'index'),
+    #path('summarizer/', views.web_summarizer, name = 'summarizer'),
+    #path('tweet_sentiments/', views.twitter, name='twitter'),
+    #path('names/', views.name_classify, name='nigerian_names'),
 ]
+
+
 
 
 
