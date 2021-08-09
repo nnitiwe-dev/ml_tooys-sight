@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.conf import settings
 import os
 
-os.environ['DISPLAY'] = ':0.0'
+os.environ['DISPLAY'] = ':1.1'
 
 import pywhatkit as kit
 
