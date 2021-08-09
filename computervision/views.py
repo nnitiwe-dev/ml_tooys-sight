@@ -10,7 +10,7 @@ def index_page(request):
 def text_2_hand(request):
 	saved_image=None
 
-	if request.GET['comment']!='':
+	if request.GET.get('comment', False) is not False:
 		path = os.path.join(settings.MEDIA_ROOT,'text_2_hand.png')
 		kit.text_to_handwriting(request.GET['comment'],save_to=path)
 
