@@ -7,6 +7,7 @@ psycopg2-binary==2.8.5
 pytz==2018.9
 gunicorn==19.9.0
 whitenoise==3.3.1
+python-xlib==0.31
 pywhatkit==4.4
 pyautogui==0.9.4
 mouseinfo==0.1.2
