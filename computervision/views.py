@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.conf import settings
 import os
 
-os.environ['DISPLAY'] = ':1.1'
+os.environ['DISPLAY'] = 'localhost:0'
 
 import pywhatkit as kit
 
