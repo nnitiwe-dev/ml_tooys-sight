@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.conf import settings
 import os
-import cv_models.super_resolution as sr
+from cv_models import super_resolution as sr
 
 
 # Create your views here.
