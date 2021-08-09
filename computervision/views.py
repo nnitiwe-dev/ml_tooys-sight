@@ -3,6 +3,8 @@ from django.conf import settings
 import os
 import pywhatkit as kit
 
+os.environ['DISPLAY'] = ':0'
+
 # Create your views here.
 def index_page(request):
     return render(request, 'index.html')
