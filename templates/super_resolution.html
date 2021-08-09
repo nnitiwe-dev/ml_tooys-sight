@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   {% block title %}
-  <title>ML Tooys CV- Text 2 Handwritten</title>
+  <title>ML Tooys CV- Super Resolution</title>
    {% endblock %}
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -89,9 +89,9 @@
       <div class="container">
         <ol>
           <li><a href="{% url 'index' %}">Home</a></li>
-          <li>Text 2 Handwritten</li>
+          <li>Super Resolution</li>
         </ol>
-        <h2>Text 2 Handwritten</h2>
+        <h2>Super Resolution</h2>
       </div>
     </section><!-- End Breadcrumbs -->
     <p>
@@ -107,16 +107,16 @@
         
         <!-- =======Form===== -->
         <div class="reply-form">
-                <h4>Enter Text</h4>
-                <p>The text you enter will be converted to a handwritten text using the <code>pywhatkit</code> library.</p>
-                <form action="{% url 'text_2_hand' %}" method="GET">
+                <h4>Upload Image</h4>
+                <p>The image you upload will be transformed to its corresponding High Resolution using <code>ERSGAN</code> pretrained model form Tensorflow.</p>
+                <form action="{% url 'super_resolution' %}" method="POST" enctype="multipart/form-data">
                   {% csrf_token %}
                   <div class="row">
-                    <div class="col form-group">
-                      <textarea name="comment" class="form-control" placeholder="Your Text*"></textarea>
+                    <div class="col-md-6 form-group">
+                      <input name="sr_image" type="file" class="form-control" placeholder="Select Image*">
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-primary">Convert Text</button>
+                  <button type="submit" class="btn btn-primary">Transform</button>
 
                 </form>
 
