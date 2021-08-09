@@ -8,6 +8,7 @@ pytz==2018.9
 gunicorn==19.9.0
 whitenoise==3.3.1
 python3-xlib==0.15
+python-xlib==0.26
 pywhatkit==4.4
 pyautogui==0.9.4
 mouseinfo==0.1.2
