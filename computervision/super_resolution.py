@@ -4,10 +4,13 @@ from PIL import Image
 import numpy as np
 import tensorflow as tf
 import tensorflow_hub as hub
-os.environ["TFHUB_DOWNLOAD_PROGRESS"] = "True"
+import os
+from django.conf import settings
+
+#os.environ["TFHUB_DOWNLOAD_PROGRESS"] = "True"
 
 
-SAVED_MODEL_PATH = "https://tfhub.dev/captain-pool/esrgan-tf2/1"
+SAVED_MODEL_PATH = os.path.join(settings.STATIC_URL, 'esrgan-tf2_1') #"https://tfhub.dev/captain-pool/esrgan-tf2/1"
 
 def preprocess_image(image_path):
   """ Loads image from path and preprocesses to make it model ready
