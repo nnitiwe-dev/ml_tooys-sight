@@ -4,6 +4,7 @@ import os
 from . import super_resolution as sr
 
 
+
 # Create your views here.
 def index_page(request):
     return render(request, 'index.html')
@@ -11,14 +12,14 @@ def index_page(request):
 def super_resolution(request):
 	saved_image=None
 
+	if request.POST.get('sr', False) is not False:
 
-	lr_image = sr.preprocess_image(IMAGE_PATH)
-
-	model = sr.load_model()
-	start = time.time()
-	gen_image = model(lr_image)
-	gen_image = tf.squeeze(gen_image)
-	print("Time Taken: %f" % (time.time() - start))
+		lr_image = sr.preprocess_image(request.FILES['sr_image'])
+		model = sr.load_model()
+		#start = time.time()
+		gen_image = model(lr_image)
+		gen_image = tf.squeeze(gen_image)
+		#print("Time Taken: %f" % (time.time() - start))
 	
 	# if request.GET.get('comment', False) is not False:
 	# 	path = os.path.join(settings.MEDIA_ROOT,'text_2_hand.png')
