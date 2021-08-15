@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.conf import settings
 import os
 from . import super_resolution as sr
-
+from django.core.files.base import ContentFile
 
 
 # Create your views here.
@@ -13,8 +13,9 @@ def super_resolution(request):
 	saved_image=None
 
 	if request.POST.get('sr', False) is not False:
-
-		lr_image = sr.preprocess_image(request.FILES['sr_image'])
+		uploaded=request.FILES['sr_image']
+		image_content = ContentFile(uploaded.read())
+		lr_image = sr.preprocess_image(image_content)
 		model = sr.load_model()
 		#start = time.time()
 		gen_image = model(lr_image)
