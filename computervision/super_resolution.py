@@ -41,4 +41,4 @@ def save_image(image, filename):
   print("Saved as %s.jpg" % filename)
 
 def load_model():
-	return hub.load(SAVED_MODEL_PATH)
+	return tf.saved_model.load(SAVED_MODEL_PATH)#hub.load(SAVED_MODEL_PATH)
